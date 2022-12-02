@@ -1,11 +1,10 @@
 <template>
     <header class="fixed-top bg-white">
         <div class="m-0 p-0">
-            <div class="custom-container">
-                <header-ust/>
+            <div>
+                <header-ust id="header-ust"/>
                 <hr class="m-2 my-2 mx-0 custom-hr"/>
-                
-               <header-menu/>
+                <header-menu/>
                 <hr class="m-2 my-0 mx-0 custom-hr"/>
             </div>
         </div>
@@ -20,7 +19,7 @@ import HeaderUst from './HeaderUst';
 export default {
     components:{
     HeaderMenu,
-    HeaderUst,
+    HeaderUst
 },
    
 }
