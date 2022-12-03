@@ -1,17 +1,29 @@
 <template>
+ <div>
              
 <app-header/>
+<dongu-carousel/>
+<nuxt-link to='{path:"/Ana.vue"}'></nuxt-link>
+</div>
+
+
+
+
+
 
 
 </template>
 
 <script>
-import AppHeader from '../components/AppHeader.vue';
+import DonguCarousel from '../components/Anasayfa/DonguCarousel.vue';
+import AppHeader from '../components/Header/AppHeader.vue';
+
+
 
 
 
 export default {
-  components: { AppHeader ,},
+  components: { AppHeader, DonguCarousel ,},
   name: 'IndexPage'}
   
 

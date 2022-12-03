@@ -1,5 +1,12 @@
 import { createApp } from 'vue'
 import index from './index.vue'
+import { router } from "../.nuxt/router.js"
+
+new Vue({
+    el: '#app',
+    render: h => h(App),
+    router
+  });
 
 
 import 'bootstrap'
