@@ -1,9 +1,9 @@
 <template>
-  
+  <div>
     <div class="spacer">
         &nbsp;
+      </div>
    
-    
       <div
         id="carouselExampleIndicators"
         class="carousel slide"

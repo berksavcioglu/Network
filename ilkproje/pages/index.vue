@@ -1,20 +1,16 @@
 <template>
- <div>
+<div>
              
 <app-header/>
+<router-link :to="{path:'/ana'}">ana </router-link>
 <dongu-carousel/>
-<nuxt-link to='{path:"/Ana.vue"}'></nuxt-link>
+<coklu-advert/>
+
 </div>
-
-
-
-
-
-
-
 </template>
 
 <script>
+import CokluAdvert from '../components/Anasayfa/CokluAdvert.vue';
 import DonguCarousel from '../components/Anasayfa/DonguCarousel.vue';
 import AppHeader from '../components/Header/AppHeader.vue';
 
@@ -22,8 +18,9 @@ import AppHeader from '../components/Header/AppHeader.vue';
 
 
 
+
 export default {
-  components: { AppHeader, DonguCarousel ,},
+  components: { AppHeader, DonguCarousel, CokluAdvert ,},
   name: 'IndexPage'}
   
 
