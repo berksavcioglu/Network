@@ -26,11 +26,12 @@ import'../static/style.css';
   library.add(FontawesomeIcon);
   import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
   
-  
 
-import 'bootstrap'
+
+import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
+
 
 
 

@@ -6,6 +6,7 @@
 <dongu-carousel/>
 <coklu-advert/>
 <app-footer/>
+<not-login-favorisayfa/>
 
 </div>
 </template>
@@ -13,6 +14,7 @@
 <script>
 import CokluAdvert from '../components/Anasayfa/CokluAdvert.vue';
 import DonguCarousel from '../components/Anasayfa/DonguCarousel.vue';
+import NotLoginFavorisayfa from '../components/FavoriSayfası/NotLoginFavorisayfa.vue';
 import AppFooter from '../components/Footer/AppFooter.vue';
 import AppHeader from '../components/Header/AppHeader.vue';
 
@@ -22,7 +24,7 @@ import AppHeader from '../components/Header/AppHeader.vue';
 
 
 export default {
-  components: { AppHeader, DonguCarousel, CokluAdvert, AppFooter ,},
+  components: { AppHeader, DonguCarousel, CokluAdvert, AppFooter, NotLoginFavorisayfa ,},
   name: 'IndexPage'}
   
 
