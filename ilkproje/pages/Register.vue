@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container-fluid  ">
+    <div class="container-fluid p-0 mb-5 ">
         <img :style="imageWidth(activeTab)" src="../static/images/login.jpg" class="img-thumbnail p-0 m-0 image-register  w-100" alt="login" />
       <div class="login-position  w-22 row bg-white border-left border-right border-bottom">
         <div class="col-12 row p-0 m-0 bb-4">

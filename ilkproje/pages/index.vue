@@ -4,6 +4,7 @@
 <dongu-carousel/>
 <coklu-advert/>
 <app-sepet/>
+<social-network/>
 <app-footer/>
 </div>
 
@@ -14,6 +15,7 @@
 <script>
 import CokluAdvert from '../components/Anasayfa/CokluAdvert.vue';
 import DonguCarousel from '../components/Anasayfa/DonguCarousel.vue';
+import SocialNetwork from '../components/Anasayfa/SocialNetwork.vue';
 
 import AppFooter from '../components/Footer/AppFooter.vue';
 import AppHeader from '../components/Header/AppHeader.vue';
@@ -25,7 +27,7 @@ import AppSepet from '../components/Sepet/AppSepet.vue';
 
 
 export default {
-  components: { AppHeader, DonguCarousel, CokluAdvert, AppFooter,  AppSepet ,},
+  components: { AppHeader, DonguCarousel, CokluAdvert, AppFooter,  AppSepet ,SocialNetwork},
   name: 'IndexPage'}
   
 
