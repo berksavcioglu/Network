@@ -16,7 +16,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import '@fortawesome/fontawesome-free/css/all.css';
 import '@fortawesome/fontawesome-free/js/all.js';
 
-
+import'../static/style.css';
 
 
   library.add(far);
@@ -31,6 +31,7 @@ import '@fortawesome/fontawesome-free/js/all.js';
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
+
 
 
 

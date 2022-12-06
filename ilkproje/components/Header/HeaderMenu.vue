@@ -12,7 +12,7 @@
                 >
                     <span class="fs-7">{{ category.name }}</span>
                 </a>
-                <header-submenu
+                <header-alt-menu
                     v-if="subtitles.length > 0"
                     :subtitles="subtitles"
                     :photo="currentCategoryPhoto"
@@ -33,8 +33,37 @@ export default {
             categories: [
                 {
                     id: 0, name: "YENI GELENLER",
-                    subtitles: [],
-                    categoryPhoto: undefined
+                    subtitles: [{
+                            id:14,
+                            name: "Tüm Kadın",
+                            
+                        },
+                        {
+                            id:14,
+                            name: "Tüm Erkek",
+                            
+                        },
+                        {   
+                            id:0,
+                            name: "SEZON HİKAYELERİ",
+                            content: [
+                                { id: 1, name: "Sezon Hikayeleri Kadın" },
+                                { id: 2, name: "Denim Studio" },
+                                { id: 3, name: "Doğanın yansıması" },
+                                { id: 4, name: "Dönüşüm" },
+                                { id: 5, name: "Kusursuz Denge" },
+                                { id: 6, name: "Network Limited" },
+                                { id: 7, name: "Şehre Yeniden Merhaba" },
+                                { id: 8, name: "Weekend Gateaway" },
+                                { id: 9, name: "Sezon Hikayeleri Erkek" },
+                                { id: 10, name: "Denim Studio" },
+                                { id: 11, name: "Doğanın yansıması" },
+                                { id: 12, name: "Dönüşüm" },
+                                { id: 13, name: "Şehre Merhaba" },
+                                { id: 14, name: "Weekend Gateaway" },
+                            ],
+                        },],
+                    categoryPhoto: "https://img-network.mncdn.com//categoryimages/3_2022102610375934824.jpg"
                 },
                 {
                     id: 1, name: "KADIN",
@@ -109,7 +138,7 @@ export default {
                                 { id: 8, name: "Çorap" },
                             ],
                         }],
-                    categoryPhoto: "https://img-network.mncdn.com/categoryimages/KADIN_2021092913005438342.jpg"
+                    categoryPhoto: "https://img-network.mncdn.com//categoryimages/KADIN-KATEGORI_2022082311485695801.jpg"
                 },
                 {
                     id: 2,
@@ -177,7 +206,7 @@ export default {
                                 { id: 8, name: "Anahtarlık" },
                             ],
                         }],
-                    categoryPhoto: "https://img-network.mncdn.com/categoryimages/ERKEK_2021092913013454444.jpg",
+                    categoryPhoto: "https://img-network.mncdn.com//categoryimages/ERKEK-KATEGORI_2022082311492058448.jpg",
                 },
 
                
@@ -189,24 +218,81 @@ export default {
                 },
                 {
                     id: 4, name: "OUTLET",
-                    subtitles: [{
-                        id:10,
-                        name: "Erkek",
-                        content:[
-                            {id:1,name:"Giyim"},
-                            {id:2,name:"Ayakkabı"},
-                            {id:3,name:"Aksesuar"},
-                        ]
-                    },
-                    {
-                        id:11,
-                        name: "Kadın",
-                        content:[
-                            {id:1,name:"Giyim"},
-                            {id:2,name:"Ayakkabı"},
-                            {id:3,name:"Aksesuar"},
-                        ]
-                    }],
+                    subtitles: [{   
+                            id:10,
+                            name: "Tüm Giyim",
+                            content: [
+                                { id: 1, name: "Kazak" },
+                                { id: 2, name: "Hırka" },
+                                { id: 3, name: "Ceket" },
+                                { id: 4, name: "Gömlek" },
+                                { id: 5, name: "Bluz" },
+                                { id: 6, name: "Sweatshirt" },
+                                { id: 7, name: "Elbise" },
+                                { id: 8, name: "T-Shirt" },
+                                { id: 9, name: "Dış Giyim" },
+                                { id: 10, name: "Yelek" },
+                                { id: 11, name: "Tulum" },
+                                { id: 12, name: "Plaj Giyim" },
+                                { id: 13, name: "Pantolon" },
+                                { id: 14, name: "Etek" },
+                                { id: 15, name: "Şort" },
+                            ],
+                        },
+                        {
+                            id:11,
+                            name: "Tüm Ayakkabı",
+                            content: [
+                                { id: 1, name: "Ayakkabı" },
+                                { id: 2, name: "Çizme" },
+                                { id: 3, name: "Bot" },
+                               
+                            ],
+                        },
+                        {
+                            id:12,
+                            name: "Tüm Aksesuar",
+                            content: [
+                                { id: 1, name: "Takı" },
+                                { id: 2, name: "Eldiven Atkı" },
+                                { id: 3, name: "Şal-Fular" },
+                                { id: 4, name: "Çorap" },
+                                
+                            ],
+                        },
+                        {
+                            id:13,
+                            name: "Tüm Giyim",
+                            content: [
+                                { id: 1, name: "Kazak" },
+                                { id: 2, name: "Gömlek" },
+                                { id: 3, name: "Sweatshirt" },
+                                { id: 4, name: "Yelek" },
+                                { id: 5, name: "T-Shirt" },
+                                { id: 6, name: "Ceket" },
+                                { id: 7, name: "Dış Giyim" },
+                                { id: 8, name: "Takım Elbise" },
+                                { id: 9, name: "Smokin Takım Elbise" },
+                                { id: 10, name: "Pantolon" },
+                                { id: 11, name: "Plaj Giyim Erkek" },
+                                { id: 12, name: "Şort" },
+                            ],
+                        },
+                        {
+                            id:14,
+                            name: "Tüm Ayakkabı",
+                            content: [
+                                { id: 1, name: "Ayakkabı" },
+                                { id: 2, name: "Loafer" },
+                                { id: 3, name: "Sneaker" },
+                                
+                            ],
+                        },
+                        {
+                            id:14,
+                            name: "Tüm Aksesuar",
+                            
+                        }],
                     categoryPhoto: undefined
                 },
             ],
@@ -248,5 +334,7 @@ export default {
 .menu-link:hover{
     border-bottom: 3px solid black;
     color: black;
+    
 }
+
 </style>
