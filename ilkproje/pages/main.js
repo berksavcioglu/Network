@@ -36,6 +36,8 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 
 
 
+
+
 import { dom } from "@fortawesome/fontawesome-svg-core";
 dom.watch();
 import "bootstrap/dist/css/bootstrap.min.css";
