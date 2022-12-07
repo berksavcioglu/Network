@@ -57,8 +57,8 @@
       </Carousel>
     </div>
   
-    <div class="mt-3">
-        <button class="custom-btn p-2">
+    <div class="mt-2 d-flex justify-content-center ">
+        <button class="custom-btn p-3 m-7 ">
             Daha Fazla
         </button>
     </div>
