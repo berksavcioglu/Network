@@ -71,7 +71,7 @@ export default {
 
             }
             else{
-                this.$router.push({name:"KayıtSayfası"});
+                this.$router.push({name:"Register"});
             }
         }
     },
