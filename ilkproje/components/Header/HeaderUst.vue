@@ -22,7 +22,7 @@
                     alt=""/>
                     <span id="cart-quantity">{{cartItemsQuantity === 0 ? null : cartItemsQuantity}}</span>
                     </div>
-                    <router-link to="/favoriler">
+                    <router-link :to="{path:'/favoriler'}">
                 <img src="../../static/images/heart.png" alt=""
                 class=" mx-2 pointer settings-icon"
                 />

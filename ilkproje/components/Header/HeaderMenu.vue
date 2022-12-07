@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="container my-1" id="menu">
-            <nav class="d-flex justify-content-around px-5 mx-5">
+            <nav class="d-flex justify-content-around  px-5 mx-5">
                 <a
                     v-for="category in categories"
                     :key="category.id"

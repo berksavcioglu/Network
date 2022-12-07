@@ -69,9 +69,9 @@
   
   <script>
   import { defineComponent } from "vue";
-//   import { Carousel, Navigation, Slide } from "vue3-carousel";
+  // import { Carousel, Navigation, Slide } from "vue3-carousel";
   
-//   import "vue3-carousel/dist/carousel.css";
+  // import "vue3-carousel/dist/carousel.css";
   
   export default defineComponent({
     props:{
@@ -82,12 +82,12 @@
     },
     name: "WrapAround",
     components: {
-    //   Carousel,
-    //   Slide,
-    //   Navigation,
+      // Carousel,
+      // Slide,
+      // Navigation,
     },
     data: () => ({
-      // carousel settings
+     //  carousel settings
       settings: {
         itemsToShow: 1,
         snapAlign: "center",
