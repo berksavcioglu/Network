@@ -1,52 +1,87 @@
 <template>
-  <section>
-    <div class="container-fluid p-0 mb-5 ">
-        <img :style="imageWidth(activeTab)" src="../static/images/login.jpg" class="img-thumbnail p-0 m-0 image-register  w-100" alt="login" />
-      <div class="login-position  w-22 row bg-white border-left border-right border-bottom">
-        <div class="col-12 row p-0 m-0 bb-4">
-          <button
-            class="col-4 text-uppercase m-0 py-2 border-0 px-0 border-end fw-bold router-button-text bg-c-gray fs-6 ls-small"
-            :class="activeButton(Tabs.Login)"
-            @click="activeTabChange(Tabs.Login)"
-          >GİRİŞ YAP</button>
-          <button
-            class="col-4 text-uppercase m-0 py-3 border-0 px-0 border-end bg-c-gray router-button-text fw-bold fs-6 ls-small"
-            :class="activeButton(Tabs.Register)"
-            @click="activeTabChange(Tabs.Register)"
-          >ÜYE OL</button>
-          <button
-            class="col-4 text-uppercase m-0 py-3 border-0  px-0 bg-c-gray fw-bold router-button-text fs-6 ls-small"
-            :class="activeButton(Tabs.SiparisTakip)"
-            @click="activeTabChange(Tabs.SiparisTakip)"
-          >SİPARİŞ TAKİBİ</button>
+  <div>
+ <app-header/>
+  
+    <div container>
+       <div id="wrap " class="home">
+       
+      <div class="container mainContent">
+        <div class="fullWidth.article">
+        <div class="pageLogin">
+          <div class= "pageLogin__main">
+          <div class="pageLogin__left ">
+            <div class="pageLogin__title "> GİRİŞ YAP</div>
+            <div class="pageLogin__subTitle">Network.com.tr’ye kayıtlı bilgilerinizle hızlı giriş yapın.</div>
+            <login/>
+          
+          </div>
+    
+          <div class="pageLogin__right"> 
+          <div class="pageLogin__title "> ÜYE OL</div>
+            <div class="pageLogin__subTitle">Network.com.tr’ye üye olarak birçok avantajdan faydalanabilirsiniz. Öne çıkan avantajlar;</div>
+            <div class="am-auto mt-3">
+            
+              <img src="../static/images/heart.png" alt="">    Kampanyalardan öncelikli olarak haberdar
+           <br>olabilirsiniz.</div>
+           <div class="am-auto mt-3">
+            <img src="../static/images/heart.png" alt="">   Network mobil uygulaması ile alışveriş keyfinize
+           <br> telefonunuzdan devam edebilirsiniz..</div>
+           <div class="w-75 my-5">
+              <button  @click.prevent="Register(userData)"  class="kayıt-button w-100 p-3"
+            
+           >
+            
+               
+                ÜYE OL
+              
+          </button>
+            </div>
+            <div class="w-75 my-5">
+              <button @click.prevent="SiparisTakip(userData)" class="kayıt-button w-100 p-3"
+              @click="gotosiparistakip()"
+            >SİPARİS TAKİBİ</button>
+            </div>
+
+
+
+          
+          
+          </div>
+         
         </div>
-        <div class="col-12 d-flex flex-column justify-content-around">
+       
          <keep-alive>
           <component :is="activeTab"></component>
          </keep-alive>
         </div>
       </div>
-      <img />
     </div>
-</section>
+  </div>
+  </div>
+   
+</div>
 </template>
 
 <script>
 import Login from '../components/KayıtSayfası/Login.vue';
 import Register from '../components/KayıtSayfası/Register.vue';
 import SiparisTakip from '../components/KayıtSayfası/SiparisTakip.vue';
+import AppHeader from '../components/Header/AppHeader.vue';
+import SiparisTakipVue from '../components/KayıtSayfası/SiparisTakip.vue';
+
 export default {
   components: {
     Login,
     Register,
-    SiparisTakip
+    SiparisTakip,
+    AppHeader
   },
   
   data() {
     return {
-      activeTab: "Login",
+     
       Tabs: {
-        'Login':{name:'Login',height:null},
+        
         'Register':{name:'Register',height:'1500px'},
         'SiparisTakip':{name:'SiparisTakip',height:null},
       },
@@ -65,7 +100,17 @@ export default {
       let tab = this.Tabs[currentTabName];
 
       return tab.height != null ? {height:tab.height} : {}
+    },
+
+    gotosiparistakip(){
+
+      this.$router.push({path: 'Siparistakipp.vue'});
+
+
     }
+    
+    
+    
   },
 
 }
@@ -78,11 +123,27 @@ export default {
   z-index: 1;
 }
 .login-position {
-  position: absolute;
-  right: 2%;
-  top: 165px;
-  z-index: 2;
+  
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8;
+    
+
+    
+
+    
+ 
 }
+
+  ;
+
 .w-22 {
   width: 415px;
 }
@@ -106,4 +167,124 @@ export default {
 .ls-small{
   letter-spacing: -1px;
 }
+.container.mainContent, .fullWidth.article {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    z-index: 0;
+}
+#wrap {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+}
+.container.mainContent, .fullWidth.article {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    z-index: 0;
+ 
+}
+.altsatır{
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 18px;
+
+
+
+  }
+.container:before{
+    display: table;
+    content: " ";
+}
+.fullWidth {
+    float: left;
+    width: 100%;
+    position: relative;
+  
+}
+.mainContent .article > div {
+    position: relative;
+}
+.pageLogin {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top: 100px;
+    
+    
+    background-color: #f8f8f8;
+}
+.kayıt-button{
+
+  background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    font-family: "TTNormsPro-Medium";
+    opacity: 1;
+
+
+}
+.pageLogin__main {
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px 0 62px 0;
+    box-shadow: 1px 1px 1px 0 rgb(0 0 0 / 10%);
+    background-color: #fff;
+    display: flex;
+    margin-top: 100px;
+    ;
+    
+}
+.pageLogin__left {
+    position: relative;
+    border-right: 1px solid rgba(0,0,0,.1);
+    width: 50%;
+    padding: 50px 50px 40px 50px;
+   
+}
+.pageLogin__left, .pageLogin__right {
+    width: 50%;
+    padding: 50px 50px 40px 50px;
+}
+.pageLogin__title {
+    margin-bottom: 10px;
+    font-family: "TTNormsPro-Medium";
+    font-size: 20px;
+    color: #000;
+    font-weight: 500;
+}
+.pageLogin__subTitle {
+    margin-bottom: 30px;
+    font-family: "FreightMicroPro-Book";
+    font-size: 16px;
+    line-height: 22px;
+    color: #626262;
+}
+.custom-button {
+    color: white;
+    background-color: #1c1c1c;
+    border: 0px;
+    letter-spacing: -1px;
+    font-weight: bold;
+  }
+  .custom-orange-link{
+    color: #5f545f;
+    transition: 0.13s color ease-in;
+  }
+ 
+
+div{
+  padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+@import 'bootstrap/dist/css/bootstrap.css';
 </style>

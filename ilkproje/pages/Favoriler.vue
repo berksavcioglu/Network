@@ -6,7 +6,7 @@
     
 </template>
 
-<script>
+<script>  
 import NotLoginFavorisayfa from '../components/FavoriSayfası/NotLoginFavorisayfa.vue';
 import AppHeader from '../components/Header/AppHeader.vue';
 

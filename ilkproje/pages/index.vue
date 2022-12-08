@@ -5,6 +5,7 @@
 <router-link to="/ana"></router-link>
 <dongu-carousel/>
 <coklu-advert/>
+<item-carousel  :title="'Sizin İçin Seçtiklerimiz'" :items="items"/>
 <app-sepet/>
 <social-network :socialItems='socialItems'/>
 <app-footer/>
@@ -18,7 +19,7 @@
 import CokluAdvert from '../components/Anasayfa/CokluAdvert.vue';
 import DonguCarousel from '../components/Anasayfa/DonguCarousel.vue';
 import SocialNetwork from '../components/Anasayfa/SocialNetwork.vue';
-
+import ItemCarousel from '../components/Anasayfa/itemCarousel.vue'
 import AppFooter from '../components/Footer/AppFooter.vue';
 import AppHeader from '../components/Header/AppHeader.vue';
 import AppSepet from '../components/Sepet/AppSepet.vue';
@@ -29,11 +30,14 @@ import AppSepet from '../components/Sepet/AppSepet.vue';
 
 
 export default {
-  components: { AppHeader, DonguCarousel, CokluAdvert, AppFooter,  AppSepet ,SocialNetwork},
+  components: { AppHeader, DonguCarousel, CokluAdvert, AppFooter,  AppSepet ,SocialNetwork,ItemCarousel},
   name: 'IndexPage',
+
+  
   data() {
         return {
             carouselImages:[
+             
                 
             ],
             
@@ -51,11 +55,7 @@ export default {
             ]
         }
     },
-    computed:{
-        items(){
-            return this.$store.state.homeItems;
-        }
-    }}
+    }
   
 
  
