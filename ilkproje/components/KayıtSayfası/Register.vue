@@ -10,6 +10,7 @@
             <label class="d-block w-100 my-2 font-small custom-tlabel" for="surname">SOYAD*</label>
             <input v-model="userData.surname" class="w-100 py-2 custom-tinput" type="text" />
           </div>
+          
           <div class="text-start m-auto mt-4 w-75" id="genderArea">
             <div class role="group" aria-label="Basic radio toggle button group">
               <label class="d-block w-100 my-2 font-small custom-tlabel" for="gender">CİNSİYET*</label>

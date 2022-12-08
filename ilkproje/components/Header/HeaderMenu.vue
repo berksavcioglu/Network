@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="container my-1" id="menu">
-            <nav class="d-flex justify-content-around  px-5 mx-5">
+            <nav class="d-flex justify-content-around   px-5 mx-5">
                 <a
                     v-for="category in categories"
                     :key="category.id"
@@ -9,11 +9,13 @@
                     href="#"
                     @click="goToItemsPage(category.id)"
                     @mouseover="showSubMenu(category)"
+                    
+                    
                 >
                     <span class="fs-7">{{ category.name }}</span>
                 </a>
                 <header-alt-menu
-                    v-if="subtitles.length > 0"
+                v-if="subtitles.length > 0"
                     :subtitles="subtitles"
                     :photo="currentCategoryPhoto"
                 />
@@ -33,43 +35,14 @@ export default {
             categories: [
                 {
                     id: 0, name: "YENI GELENLER",
-                    subtitles: [{
-                            id:14,
-                            name: "Tüm Kadın",
-                            
-                        },
-                        {
-                            id:14,
-                            name: "Tüm Erkek",
-                            
-                        },
-                        {   
-                            id:0,
-                            name: "SEZON HİKAYELERİ",
-                            content: [
-                                { id: 1, name: "Sezon Hikayeleri Kadın" },
-                                { id: 2, name: "Denim Studio" },
-                                { id: 3, name: "Doğanın yansıması" },
-                                { id: 4, name: "Dönüşüm" },
-                                { id: 5, name: "Kusursuz Denge" },
-                                { id: 6, name: "Network Limited" },
-                                { id: 7, name: "Şehre Yeniden Merhaba" },
-                                { id: 8, name: "Weekend Gateaway" },
-                                { id: 9, name: "Sezon Hikayeleri Erkek" },
-                                { id: 10, name: "Denim Studio" },
-                                { id: 11, name: "Doğanın yansıması" },
-                                { id: 12, name: "Dönüşüm" },
-                                { id: 13, name: "Şehre Merhaba" },
-                                { id: 14, name: "Weekend Gateaway" },
-                            ],
-                        },],
+                    subtitles: [],
                     categoryPhoto: "https://img-network.mncdn.com//categoryimages/3_2022102610375934824.jpg"
                 },
                 {
                     id: 1, name: "KADIN",
                     subtitles: [
                         {   
-                            id:0,
+                            id:3,
                             name: "Üst Giyim",
                             content: [
                                 { id: 1, name: "Kazak" },
@@ -86,7 +59,7 @@ export default {
                             ],
                         },
                         {
-                            id:1,
+                            id:4,
                             name: "Alt Giyim",
                             content: [
                                 { id: 1, name: "Pantolon" },
@@ -99,7 +72,7 @@ export default {
                             ],
                         },
                         {
-                            id:2,
+                            id:5,
                             name: "Dış Giyim",
                             content: [
                                 { id: 1, name: "Mont" },
@@ -110,7 +83,7 @@ export default {
                             ],
                         },
                         {
-                            id:3,
+                            id:6,
                             name: "Ayakkabı",
                             content: [
                                 { id: 1, name: "Bot" },
@@ -125,7 +98,7 @@ export default {
                             ],
                         },
                         {
-                            id:4,
+                            id:7,
                             name: "Aksesuar",
                             content: [
                                 { id: 1, name: "Çanta" },
@@ -144,7 +117,7 @@ export default {
                     id: 2,
                     name: "ERKEK", subtitles: [
                         {
-                            id:5,
+                            id:8,
                             name: "Üst Giyim",
                             content: [
                                 { id: 1, name: "Kazak" },
@@ -160,7 +133,7 @@ export default {
                             ],
                         },
                         {
-                            id:6,
+                            id:9,
                             name: "Alt Giyim",
                             content: [
                                 { id: 1, name: "Pantolon" },
@@ -172,7 +145,7 @@ export default {
                             ],
                         },
                         {
-                            id:7,
+                            id:10,
                             name: "Dış Giyim",
                             content: [
                                 { id: 1, name: "Palto" },
@@ -183,7 +156,7 @@ export default {
                             ],
                         },
                         {
-                            id:8,
+                            id:11,
                             name: "Ayakkabı",
                             content: [
                                 { id: 1, name: "Bot" },
@@ -193,7 +166,7 @@ export default {
                             ],
                         },
                         {
-                            id:9,
+                            id:12,
                             name: "Aksesuar",
                             content: [
                                 { id: 1, name: "Çanta-Cüzdan" },
@@ -219,7 +192,7 @@ export default {
                 {
                     id: 4, name: "OUTLET",
                     subtitles: [{   
-                            id:10,
+                            id:13,
                             name: "Tüm Giyim",
                             content: [
                                 { id: 1, name: "Kazak" },
@@ -240,7 +213,7 @@ export default {
                             ],
                         },
                         {
-                            id:11,
+                            id:14,
                             name: "Tüm Ayakkabı",
                             content: [
                                 { id: 1, name: "Ayakkabı" },
@@ -250,7 +223,7 @@ export default {
                             ],
                         },
                         {
-                            id:12,
+                            id:15,
                             name: "Tüm Aksesuar",
                             content: [
                                 { id: 1, name: "Takı" },
@@ -261,7 +234,7 @@ export default {
                             ],
                         },
                         {
-                            id:13,
+                            id:16,
                             name: "Tüm Giyim",
                             content: [
                                 { id: 1, name: "Kazak" },
@@ -279,7 +252,7 @@ export default {
                             ],
                         },
                         {
-                            id:14,
+                            id:17,
                             name: "Tüm Ayakkabı",
                             content: [
                                 { id: 1, name: "Ayakkabı" },
@@ -289,7 +262,7 @@ export default {
                             ],
                         },
                         {
-                            id:14,
+                            id:18,
                             name: "Tüm Aksesuar",
                             
                         }],
@@ -306,6 +279,7 @@ export default {
             this.currentCategoryPhoto = category.categoryPhoto;
 
         },
+      
         goToItemsPage(id){
             this.$router.push({ name: "CategoryItemsPage", query: { categoryId: id }, params: { id: id } });
         }
@@ -336,5 +310,6 @@ export default {
     color: black;
     
 }
+@import 'bootstrap/dist/css/bootstrap.css';
 
 </style>

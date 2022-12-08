@@ -1,5 +1,5 @@
 <template>
-    <section id="orderFollow">
+    <section id="SiparsiTakip">
       <form>
         <div class="d-flex flex-column justify-content-center align-items-center">
           <div class="text-start m-auto mt-5 w-75" id="mailArea">
@@ -11,7 +11,7 @@
             <input class="w-100 py-2 custom-tinput" type="text" name="orderCode" id="orderCode">
           </div>
           <div class="w-75 my-3">
-            <button class="custom-button w-100 p-3">SİPARİSİMİ GETİR</button>
+            <button class="custom-button w-100 p-3">SİPARİSİNİZİ GÖRÜNTÜLEYİN</button>
           </div>
           <div class="text-start w-75">
             <hr class="mt-2 mb-4 w-100"/>

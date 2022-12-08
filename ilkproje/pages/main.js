@@ -33,7 +33,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
 
-
+// import 'vue3-carousel/dist/carousel.css';
 
 
 

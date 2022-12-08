@@ -69,9 +69,9 @@
   
   <script>
   import { defineComponent } from "vue";
-  // import { Carousel, Navigation, Slide } from "vue3-carousel";
+//  import { Carousel, Navigation, Slide } from "vue3-carousel";
   
-  //  import "vue3-carousel/dist/carousel.css";
+//    import "vue3-carousel/dist/carousel.css";
 
   
   export default defineComponent({
@@ -85,7 +85,7 @@
     components: {
       //  Carousel,
       //  Slide,
-      //  Navigation,
+      //   Navigation,
     },
     data: () => ({
      //  carousel settings
@@ -193,4 +193,5 @@
     color: rgb(255, 255, 255);
     opacity:1;
   }
+  
   </style>

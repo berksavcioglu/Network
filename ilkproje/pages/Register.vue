@@ -28,7 +28,7 @@
            <br> telefonunuzdan devam edebilirsiniz..</div>
            <div class="w-75 my-5">
               <button  @click.prevent="Register(userData)"  class="kayıt-button w-100 p-3"
-            
+                 @click=" gotoregister()"
            >
             
                
@@ -58,7 +58,7 @@
     </div>
   </div>
   </div>
-   
+  <app-footer/>
 </div>
 </template>
 
@@ -68,13 +68,15 @@ import Register from '../components/KayıtSayfası/Register.vue';
 import SiparisTakip from '../components/KayıtSayfası/SiparisTakip.vue';
 import AppHeader from '../components/Header/AppHeader.vue';
 import SiparisTakipVue from '../components/KayıtSayfası/SiparisTakip.vue';
+import AppFooter from '../components/Footer/AppFooter.vue';
 
 export default {
   components: {
     Login,
     Register,
     SiparisTakip,
-    AppHeader
+    AppHeader,
+    AppFooter
   },
   
   data() {
@@ -104,10 +106,16 @@ export default {
 
     gotosiparistakip(){
 
-      this.$router.push({path: 'Siparistakipp.vue'});
+      this.$router.push({path: '/Siparis'});
 
 
-    }
+    },
+    gotoregister(){
+
+this.$router.push({path: '/Registerr'});
+
+
+}
     
     
     

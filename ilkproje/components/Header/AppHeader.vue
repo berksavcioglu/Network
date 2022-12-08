@@ -77,4 +77,5 @@ export default {
     border: black 1px solid !important;
     outline: none !important;
 }
+@import 'bootstrap/dist/css/bootstrap.css';
 </style>
