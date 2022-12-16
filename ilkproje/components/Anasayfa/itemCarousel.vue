@@ -1,41 +1,42 @@
 <template>
-    <div class="d-flex flex-column justify-content-start align-items-center">
-      <div class="mt-5">
-        <h4>{{ title }}</h4>
-      </div>
-      <Carousel class="custom-container mt-2" :settings="settings" :breakpoints="breakpoints">
-        <Slide v-for="item in items" :key="item.id">
+
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    <h4>{{ title }}</h4>
+   <div @click="gotodetailpage()" class="d-flex flex-row justify-content-center align-items-center">
+   
+    
+   
+     <div v-for="item in items" :key="item.id ">
           <item
             :style="{ width: itemCarouselsettings.itemWidth }"
-            @click="goToItemPage(item.id)"
+            @click="gotodetailpage()"
             :item="item"
-            class="pointer"
+            
+          
+            class="pointer col-6 p-2 m-2"
           />
-        </Slide>
-  
-        <template #addons>
-          <Navigation class="rounded custom-navigation" />
-        </template>
-      </Carousel>
-      <div class="mt-5 mb-5 w-25" v-if="itemCarouselsettings.buttonVisible">
+        </div>
+      </div>
+        <div class="mt-2 mb-5 w-25 " v-if="itemCarouselsettings.buttonVisible">
         <router-link to="/allitems">
           <input class="custom-carousel-button w-75 p-3" type="button" value="Tümünü Gör" />
         </router-link>
       </div>
     </div>
+ 
   </template>
   
   <script>
   import { defineComponent } from 'vue';
-//   import { Carousel, Navigation, Slide } from 'vue3-carousel';
-//   import 'vue3-carousel/dist/carousel.css';
+  import { Navigation, Slide } from 'vue3-carousel';
+   import 'vue3-carousel/dist/carousel.css';
   import Item from '../Appitems/item.vue';
   export default defineComponent({
     name: 'ExamplePagination',
     components: {
-    //   Carousel,
-    //   Slide,
-    //   Navigation,
+      
+       Slide,
+       Navigation,
       Item,
     },
     props: {
@@ -80,9 +81,15 @@
       },
     }),
     methods: {
+      gotodetailpage(id){
+        this.$router.push({path: '/ItemDetail'});
+        
+        
+
+      },
       goToItemPage(id) {
         this.$store.dispatch('fetchItem', id);
-        this.$router.push({ name: 'ItemDetailPage',params: { id: id } });
+        this.$router.push({ name: 'ItemDetail',params: { id: id } });
       }
     }
   });
@@ -108,5 +115,15 @@
     background-color: transparent;
     margin-left: -20px;
     margin-right: -20px;
+  }
+  .carousel {
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  
+  .carousel * {
+    box-sizing: border-box;
   }
   </style>

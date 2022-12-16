@@ -110,6 +110,7 @@
                     </div>
                 </div>
             </div>
+            
             <hr class="mt-0">
         </div>
         <div id="socialMedia" class="w-100 row mt-5">
@@ -138,7 +139,7 @@ export default {
     ],
     data() {
         return {
-            currentColor: this.itemDetails.content.colorOptions[0].name,
+            currentColor: this.itemDetails.content.colorOptions[5].name,
             currentSize: "None",
             currentColorObject: this.itemDetails.content.colorOptions[0],
             sizeIsChosen: true,

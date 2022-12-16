@@ -9,7 +9,7 @@
         <span class="c-black favorites__loginText">Sepetiniz Henüz Boş</span>
       </div>
       <div class="mb-3 mt-3">
-        <router-link to="/favourites">
+        <router-link to="/Favoriler">
           <button style="width: 275px" type="button" class="black-button" data-bs-dismiss="modal">
             Favorilerize göz atın
           </button>

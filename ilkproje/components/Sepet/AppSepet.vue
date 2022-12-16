@@ -33,10 +33,10 @@
                   :key="index"
                   :item="item"
                   class="mt-2 "
-                  id="cart-item"
+                  id="item-sepet"
                 />
               </div>
-              <buton-sepet/>
+              <buton-sepet :totalPrice="totalPrice"/>
             </div>
             <bos-sepet v-else />
           </div>
@@ -57,7 +57,7 @@
       ButonSepet
     },
     data() {
-    return {
+      return {
       items: [
         {
           content: {
@@ -85,6 +85,7 @@
         },
       ],
     };
+   
   },
   methods:{
       removeItem(id)

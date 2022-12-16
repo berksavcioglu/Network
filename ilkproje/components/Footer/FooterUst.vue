@@ -1,8 +1,8 @@
 <template>
      <div class="container">
-    <div class="custom-container mt-5 pt-5">
-            <div class="row">
-                <div class="col-6 row">
+    <div class="custom-container mt-5 pt-5 ">
+            <div class="row ">
+                <div class="col-6 row ">
                     <div class="row col-5 my-2">
                         <div class="col-2 d-flex justify-content-center align-items-center">
                             <img src="../../static/images/teslimat.png" alt="">

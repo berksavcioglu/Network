@@ -100,13 +100,10 @@
 import Item from "../components/Appitems/item.vue";
 import AppBreadcrumb from "../components/appBreadcrumb.vue";
 export default {
-    created() {
-        this.$store.dispatch("fetchItemsForHome");
-        console.log(this.$route.query);
-        this.changeData();
+    
 
 
-    },
+   
     data() {
         return {
             itemCountPerRow: {

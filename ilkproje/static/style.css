@@ -2,6 +2,7 @@
     width: 80%;
     margin: auto;
   }
+
   .pointer {
     cursor: pointer;
   }
@@ -165,6 +166,10 @@
   position: absolute;
   left:-50px;
 }
+.ortalama{
+   
+  justify-content: flex-start ;
+}
 #cart-quantity{
   position: absolute;
   color: rgb(255, 0, 0);
@@ -174,6 +179,15 @@
   left: -20px;
   top: -10px;
   font-weight: bold;
+}
+.carousel {
+  position: relative;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.carousel * {
+  box-sizing: border-box;
 }
 .absolute-container{
   position: relative;

@@ -3,7 +3,7 @@
     <div class="container">
         <div class="custom-container">
         <!--TopAdvert-->
-        <div class="row my-3">
+        <div class="row my-3 ">
             <div class="col-6 p-2 m-0">
                 <img class="img-fluid" alt="kadin-koleksiyon" id="230" src="https://img-network.mncdn.com/bannerimages/HP_03_2022112906254787089.jpg">
             </div>
@@ -54,7 +54,7 @@
   </script>
   
   <style>
-
+ 
 
 
 .advert-margin {

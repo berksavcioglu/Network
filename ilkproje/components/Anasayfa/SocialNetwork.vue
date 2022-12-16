@@ -22,7 +22,7 @@
       <div class="mt-2 socialFont">
         <span>#SocialNetWork’ün parçası olun.</span>
       </div>
-      <div class="mt-2 d-flex justify-content-center">
+      <div class="mt-5 d-flex justify-content-center">
         <button
           class="custom-socialNetwork-button p-0 px-1 d-flex justify-content-start align-items-center"
           type="button"
@@ -32,12 +32,12 @@
         </button>
       </div>
     </div>
-    <div class="mt-5">
-      <Carousel  :wrap-around="true" :settings="settings" :breakpoints="breakpoints" :autoplay="3500">
-        <Slide  v-for="item in socialItems" :key="item.id">
+    <div class="d-flex flex-row justify-content-center align-items-center">
+      
+        <div  v-for="item in socialItems" :key="item.id">
           <div class="img_wrap">
             <img
-            class="pointer social-image"
+            class="pointer social-image col-6 p-0 m-3"
             :src="item.url"
             alt=""
             id="socialImage"
@@ -49,15 +49,14 @@
           
           </div>
           
-        </Slide>
+        </div>
   
-        <template #addons>
+        
           <Navigation class="carousel-icon  mx-3" />
-        </template>
-      </Carousel>
+      
     </div>
   
-    <div class="mt-2 d-flex justify-content-center ">
+    <div class="mt-2 d-flex justify-content-center p-3 ">
         <button class="custom-btn p-3 m-7 ">
             Daha Fazla
         </button>
@@ -69,9 +68,9 @@
   
   <script>
   import { defineComponent } from "vue";
-//  import { Carousel, Navigation, Slide } from "vue3-carousel";
+   
   
-//    import "vue3-carousel/dist/carousel.css";
+ 
 
   
   export default defineComponent({
@@ -83,9 +82,10 @@
     },
     name: "WrapAround",
     components: {
-      //  Carousel,
-      //  Slide,
-      //   Navigation,
+  
+      
+       
+      
     },
     data: () => ({
      //  carousel settings
@@ -113,6 +113,8 @@
   </script>
   
   <style>
+ 
+
   .socialFont {
     font-size: 18px;
     color: #182c42;
@@ -148,7 +150,7 @@
   
   .img_wrap{
     position:relative;
-    width:99.5%;
+    width:400px;
     height:300px;
     overflow: hidden;
   

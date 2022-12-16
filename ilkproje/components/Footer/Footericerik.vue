@@ -59,7 +59,7 @@
                         >İletişim</a>
                     </div>
                     <div class="col-2 d-flex flex-column justify-content-between">
-                        <h5 class="text-start">Müşteri Hizmetleri</h5>
+                        <h5 class="text-start">Kurumsal</h5>
                         <a
                             class="text-decoration-none text-start c-gray small-font"
                             href="#"
@@ -86,7 +86,7 @@
                         >Bilgi Toplumu Hizmetleri</a>
                     </div>
                     <div class="col-2 d-flex flex-column justify-content-between">
-                        <h5 class="text-start">Müşteri Hizmetleri</h5>
+                        <h5 class="text-start">Yasal</h5>
                         <a
                             class="text-decoration-none text-start c-gray small-font"
                             href="#"
@@ -113,7 +113,7 @@
                         >Mesafeli Satış Sözleşmesi</a>
                     </div>
                     <div class="col-3 d-flex flex-column justify-content-between">
-                        <h5 class="text-start">Müşteri Hizmetleri</h5>
+                        <h5 class="text-start">Kampanyalar</h5>
                         <a
                             class="text-decoration-none text-start c-gray small-font"
                             href="#"

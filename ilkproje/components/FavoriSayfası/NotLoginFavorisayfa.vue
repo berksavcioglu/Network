@@ -21,7 +21,7 @@
         </router-link>
       </div>
       <div>
-        <router-link to="/register">
+        <router-link to="/registerr">
           <button type="button" class="white-button">Üye Ol</button>
         </router-link>
       </div>
