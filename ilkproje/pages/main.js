@@ -7,7 +7,8 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 new Vue({
   el: '#app',
   render: h => h(App),
-  router
+  router,
+  store
 });
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -24,8 +25,8 @@ import'../static/style.css';
   library.add(fas);
   library.add(faUserSecret);
   library.add(FontawesomeIcon);
-  import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
-  
+  import { faUserSecret } from '@fortawesome/free-solid-svg-icons';
+  import store from '../store';
 
 
 import 'bootstrap';

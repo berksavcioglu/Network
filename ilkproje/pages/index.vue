@@ -25,6 +25,7 @@ import AppFooter from '../components/Footer/AppFooter.vue';
 import AppHeader from '../components/Header/AppHeader.vue';
 import AppSepet from '../components/Sepet/AppSepet.vue';
 import Item from '../components/Appitems/item.vue';
+// import {db} from '@/firebase'
 
 
 
