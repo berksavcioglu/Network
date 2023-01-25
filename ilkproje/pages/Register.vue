@@ -1,298 +1,123 @@
 <template>
-  <div>
- <app-header/>
-  
-    <div container>
-       <div id="wrap " class="home">
-       
-      <div class="container mainContent">
-        <div class="fullWidth.article">
-        <div class="pageLogin">
-          <div class= "pageLogin__main">
-          <div class="pageLogin__left ">
-            <div class="pageLogin__title "> GİRİŞ YAP</div>
-            <div class="pageLogin__subTitle">Network.com.tr’ye kayıtlı bilgilerinizle hızlı giriş yapın.</div>
-            <login/>
-          
-          </div>
-    
-          <div class="pageLogin__right"> 
-          <div class="pageLogin__title "> ÜYE OL</div>
-            <div class="pageLogin__subTitle">Network.com.tr’ye üye olarak birçok avantajdan faydalanabilirsiniz. Öne çıkan avantajlar;</div>
-            <div class="am-auto mt-3">
-            
-              <img src="../static/images/heart.png" alt="">    Kampanyalardan öncelikli olarak haberdar
-           <br>olabilirsiniz.</div>
-           <div class="am-auto mt-3">
-            <img src="../static/images/heart.png" alt="">   Network mobil uygulaması ile alışveriş keyfinize
-           <br> telefonunuzdan devam edebilirsiniz..</div>
-           <div class="w-75 my-5">
-              <button  @click.prevent="Register(userData)"  class="kayıt-button w-100 p-3"
-                 @click=" gotoregister()"
-           >
-            
-               
-                ÜYE OL
-              
-          </button>
+  <section class="vh-100" style="background-color: #eee;">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-xl-11">
+        <div class="card text-black" style="border-radius: 25px;">
+          <div class="card-body p-md-5">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+
+                <form class="mx-1 mx-md-4">
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="form3Example1c">Your Name</label>
+                      <input v-model="userData.name" type="text" id="form3Example1c" class="form-control" />
+
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="form3Example3c">Your Email</label>
+                      <input v-model="userData.email" type="email" id="form3Example3c" class="form-control" />
+
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="form3Example4c">Password</label>
+                      <input v-model="userData.password" type="password" id="form3Example4c" class="form-control" />
+
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="form3Example4cd">Repeat your password</label>
+                      <input v-model="userData.password2" type="password" id="form3Example4cd" class="form-control" />
+
+                    </div>
+                  </div>
+
+
+
+                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                    <button @click="registerToPage(userData)" type="button" class="btn btn-dark btn-lg text-white">Register</button>
+                  </div>
+
+                </form>
+
+              </div>
+              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+                <img src="https://www.network.com.tr/assets/v2/img/Network.jpg"
+                  class="img-fluid" alt="Sample image">
+
+              </div>
             </div>
-            <div class="w-75 my-5">
-              <button @click.prevent="SiparisTakip(userData)" class="kayıt-button w-100 p-3"
-              @click="gotosiparistakip()"
-            >SİPARİS TAKİBİ</button>
-            </div>
-
-
-
-          
-          
           </div>
-         
-        </div>
-       
-         <keep-alive>
-          <component :is="activeTab"></component>
-         </keep-alive>
         </div>
       </div>
     </div>
   </div>
-  </div>
-  <app-footer/>
-</div>
+</section>
 </template>
 
+
+
 <script>
-import Login from '../components/KayıtSayfası/Login.vue';
-import Register from '../components/KayıtSayfası/Register.vue';
-import SiparisTakip from '../components/KayıtSayfası/SiparisTakip.vue';
-import AppHeader from '../components/Header/AppHeader.vue';
-import SiparisTakipVue from '../components/KayıtSayfası/SiparisTakip.vue';
-import AppFooter from '../components/Footer/AppFooter.vue';
+
+import { collection, addDoc,setDoc,doc } from "firebase/firestore";
+import { db } from "@/firebase"
 
 export default {
-  components: {
-    Login,
-    Register,
-    SiparisTakip,
-    AppHeader,
-    AppFooter
-  },
-  
   data() {
     return {
-     
-      Tabs: {
-        
-        'Register':{name:'Register',height:'1500px'},
-        'SiparisTakip':{name:'SiparisTakip',height:null},
-      },
-      
+      userData: {
+        name: null,
+        email: null,
+        password: null,
+        password2:null
+      }
     }
   },
+
   methods: {
-    activeTabChange(tab) {
-      this.activeTab = tab.name;
-    },
-    activeButton(tab){
-      return {'register-active' : (tab.name == this.activeTab)};
-    },
-    imageWidth(currentTabName){
+    async registerToPage(userData) {
 
-      let tab = this.Tabs[currentTabName];
+      if (userData.password == userData.password2) {
+        const data = {
+        ...userData
+        }
+        delete data.password2
 
-      return tab.height != null ? {height:tab.height} : {}
-    },
+        const userId = (Math.floor(Math.random() * 10000) + 1)
 
-    gotosiparistakip(){
-
-      this.$router.push({path: '/Siparis'});
+        await setDoc(doc(db, "users",data.email), {
+          userId: userId,
+          ...data
+        });
 
 
-    },
-    gotoregister(){
+        setTimeout(() => {
+          this.$router.push({ path: "/login" })
+        }, 1500);
 
-this.$router.push({path: '/Registerr'});
+      } else {
+        alert("Şifreler uyumsuz")
+      }
 
 
-}
-    
-    
-    
+    }
   },
-
 }
 </script>
-
-<style>
-.image-register {
-  object-fit: cover;
-  position: relative;
-  z-index: 1;
-}
-.login-position {
-  
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-    
-    z-index: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f8f8f8;
-    
-
-    
-
-    
- 
-}
-
-  ;
-
-.w-22 {
-  width: 415px;
-}
-.bg-c-gray {
-  background-color: #f8f8f8;
-}
-.font-small {
-  font-size: 15px;
-}
-.bb-4 {
-  border-bottom: 4px solid #1c1c1c;
-}
-.router-button-text{
-  color: #777777;
-}
-.register-active {
-  background-color: #1c1c1c;
-  color: white;
-  border-color: #1c1c1c !important;
-}
-.ls-small{
-  letter-spacing: -1px;
-}
-.container.mainContent, .fullWidth.article {
-    width: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-    z-index: 0;
-}
-#wrap {
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-}
-.container.mainContent, .fullWidth.article {
-    width: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-    z-index: 0;
- 
-}
-.altsatır{
-    font-size: 16px;
-    line-height: 20px;
-    margin-bottom: 18px;
-
-
-
-  }
-.container:before{
-    display: table;
-    content: " ";
-}
-.fullWidth {
-    float: left;
-    width: 100%;
-    position: relative;
-  
-}
-.mainContent .article > div {
-    position: relative;
-}
-.pageLogin {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    margin-top: 100px;
-    
-    
-    background-color: #f8f8f8;
-}
-.kayıt-button{
-
-  background-color: #fff;
-    color: #000;
-    border: 1px solid #000;
-    font-family: "TTNormsPro-Medium";
-    opacity: 1;
-
-
-}
-.pageLogin__main {
-    width: 100%;
-    max-width: 1000px;
-    margin: 50px 0 62px 0;
-    box-shadow: 1px 1px 1px 0 rgb(0 0 0 / 10%);
-    background-color: #fff;
-    display: flex;
-    margin-top: 100px;
-    ;
-    
-}
-.pageLogin__left {
-    position: relative;
-    border-right: 1px solid rgba(0,0,0,.1);
-    width: 50%;
-    padding: 50px 50px 40px 50px;
-   
-}
-.pageLogin__left, .pageLogin__right {
-    width: 50%;
-    padding: 50px 50px 40px 50px;
-}
-.pageLogin__title {
-    margin-bottom: 10px;
-    font-family: "TTNormsPro-Medium";
-    font-size: 20px;
-    color: #000;
-    font-weight: 500;
-}
-.pageLogin__subTitle {
-    margin-bottom: 30px;
-    font-family: "FreightMicroPro-Book";
-    font-size: 16px;
-    line-height: 22px;
-    color: #626262;
-}
-.custom-button {
-    color: white;
-    background-color: #1c1c1c;
-    border: 0px;
-    letter-spacing: -1px;
-    font-weight: bold;
-  }
-  .custom-orange-link{
-    color: #5f545f;
-    transition: 0.13s color ease-in;
-  }
- 
-
-div{
-  padding: 0;
-    border: 0;
-    font: inherit;
-    vertical-align: baseline;
-}
-@import 'bootstrap/dist/css/bootstrap.css';
-</style>

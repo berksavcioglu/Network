@@ -1,5 +1,5 @@
 {
-  "name": "ilkproje",
+  "name": "demo",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -9,29 +9,17 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.2.1",
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-brands-svg-icons": "^5.15.4",
-    "@fortawesome/free-regular-svg-icons": "^5.15.4",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@popperjs/core": "^2.11.6",
-    "axios": "^1.2.3",
-    "bootstrap": "^5.2.3",
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.25.3",
-    "firebase": "^9.15.0",
-    "jquery": "^3.6.1",
+    "firebase": "^9.16.0",
     "nuxt": "^2.15.8",
-    "popper.js": "^1.16.1",
     "vue": "^2.7.10",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10",
-    "vue3-carousel": "^0.1.48",
-    "vuex": "^4.0.2"
+    "vuetify": "^2.6.10"
   },
   "devDependencies": {
-    "sass": "^1.56.1",
-    "sass-loader": "^10.4.1",
-    "webpack": "^4.46.0"
+    "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/vuetify": "^1.12.3"
   }
 }
