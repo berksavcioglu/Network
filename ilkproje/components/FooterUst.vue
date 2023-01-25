@@ -49,7 +49,7 @@
                                 <p class="fw-bold">Your Shopping Network</p>
                                 <p
                                     class="footer-text"
-                                >NetWork App uygulaması ile her an her yerde alışveriş keyfi</p>
+                                >NetWork App uygulaması ile her an her yerde alışverişin keyfi</p>
                             </div>
                         </div>
                     </div>

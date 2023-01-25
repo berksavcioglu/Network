@@ -7,7 +7,7 @@
                             <img class="my-2" :src="logo.url" :style="{ width: logo.width }" alt />
                             <p
                                 class="mt-2 footer-text w-75 text-start"
-                            >NetWork, “zamansız moda” anlayışıyla Türkiye’de adı özgünlük ve kaliteyle bütünleşen bir marka olmaktan gurur duyuyor. Devamını oku</p>
+                            >NetWork, “zamansız moda” anlayışıyla Türkiye’de adı özgünlük ve kalitesiyle bütünleşen bir marka olmaktan gurur duyuyor. Devamını oku</p>
                         </div>
                         <div class="mb-5">
                             <h5 class="footer-title">Müşteri Hizmetleri</h5>

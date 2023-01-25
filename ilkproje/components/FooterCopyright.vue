@@ -70,7 +70,7 @@
                 </div>
                 <div class="d-flex align-items-end">
                     <span data-test="copyright" class="small-font">
-                        ©2021 Network | tüm hakları saklıdır.
+                        ©2021 Network | Tüm hakları saklıdır.
                     </span>
                 </div>
             </div>
