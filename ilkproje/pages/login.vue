@@ -53,7 +53,7 @@
                     <br>olabilirsiniz.
                   </div>
                   <div class="am-auto mt-3">
-                    <img src="../static/images/heart.png" alt=""> Network mobil uygulaması ile alışveriş keyfinize
+                    <img src="../static/images/heart.png" alt=""> Network mobil uygulamasi ile alişveriş keyfinize
                     <br> telefonunuzdan devam edebilirsiniz..
                   </div>
                   <div class="w-75 my-5">

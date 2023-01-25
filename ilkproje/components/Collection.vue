@@ -5,7 +5,7 @@
       <!--TopAdvert-->
       <div class="row my-3 ">
           <div class="col-6 p-2 m-0">
-              <img class="img-fluid" alt="kadin-koleksiyon" id="230" src="https://img-network.mncdn.com/bannerimages/HP_03_2022112906254787089.jpg">
+              <img class="img-fluid" alt="kadın-koleksiyon" id="230" src="https://img-network.mncdn.com/bannerimages/HP_03_2022112906254787089.jpg">
           </div>
           <div class="col-6 p-2 m-0">
               <img class="img-fluid" alt="erkek-koleksiyon" id="231" src="https://img-network.mncdn.com/bannerimages/HP_05_2022112906275904757.jpg">
