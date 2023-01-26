@@ -37,7 +37,12 @@
               </div>
               <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                 <h5 class="mb-0">{{item.unitPrice}}</h5>
+               
+              
               </div>
+              <BasketItem v-for="item in basketData" :key="item.id" :item="item" @deleteItem="deleteItem(item)" />
+              </div>
+             
               <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                 <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
               </div>
@@ -48,13 +53,21 @@
 
         <div class="card">
           <div class="card-body">
+            <hr class="my-4">
+
+                    <div class="d-flex justify-content-between mb-4">
+                      <h5 class="text-uppercase">items {{ basketData.length }}</h5>
+                      <h5>$ {{ this.getTotalPrice.toFixed(2)}}</h5>
+                    </div>
+           
             <button type="button" class="btn btn-warning btn-block btn-lg">Proceed to Pay</button>
+         
           </div>
         </div>
 
       </div>
     </div>
-  </div>
+  
 </section>
 </template>
 
@@ -85,11 +98,33 @@ data() {
         })
       })
     });
+    this.basketData.forEach((item) => {
 
+
+this.totalPrice = this.totalPrice + item.unitPrice
+
+})
+
+this.$store.commit('setTotalPrice', this.totalPrice)
+
+console.log(this.getTotalPrice);
 
   },
 
+  methods: {
+    async deleteItem(item){
+      const targetDB = doc(db, "users", this.getUser.email);
 
+
+      await updateDoc(targetDB, {
+        basket: arrayRemove(item)
+      });
+
+      this.basketData = this.basketData.filter(i => i.id != item.id)
+      this.totalPrice = this.totalPrice - item.unitPrice
+      this.$store.commit('setTotalPrice', this.totalPrice)
+    }
+  },
 
   computed: {
 

@@ -1,5 +1,5 @@
 <template>
-
+ 
   <div class="container">
       <div class="custom-container">
       <!--TopAdvert-->
@@ -42,7 +42,26 @@
               <img  class="img-fluid  p-1 m-0" alt="takı" id="236" src="https://img-network.mncdn.com/bannerimages/HP_21_2022112906462406980.jpg">
           </div>
       </div>
-
-  </div>
+    </div>
+  
   </div>
 </template>
+
+<script>
+  export default {
+  
+  }
+  </script>
+  
+  <style>
+ 
+
+
+.advert-margin {
+    
+    margin-bottom: 16px;
+    
+    
+    
+      
+  }
