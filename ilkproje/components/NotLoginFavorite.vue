@@ -3,7 +3,7 @@
       class="custom-container m-header d-flex flex-column justify-content-between align-items-center"
     >
       <div class="my-5">
-        <img src="../../static/images/dosya.png" alt="" />
+        <img src="../static/images/heart.png" alt="" />
       </div>
       <div class="mb-5">
         <span class="c-black favorites__loginText"
@@ -28,8 +28,21 @@
     </div>
   </template>
   
-  <script>
-  export default {};
+  <script lang="ts">
+  export default ({
+    data: () => ({
+  
+      count: 0
+    }),
+    methods: {
+      finalPrice(){
+        this.$store.getters.totalCartPrice;},
+        goToCart(){
+          
+      }
+    }
+  })
+ 
   </script>
   
   <style>

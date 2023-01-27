@@ -54,11 +54,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-5 offset-1 row">
+                <div class="col-6 offset-1 row">
                     <div class="col-3">
                         <img
                             alt="Network App"
-                            class="img-responsive w-75"
+                            class="img-responsive w-100"
                             src="../static/images/tel.png"
                             data-selected="true"
                             data-label-id="0"

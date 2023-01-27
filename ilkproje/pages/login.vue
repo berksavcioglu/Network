@@ -81,8 +81,15 @@
 <script>
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "@/firebase"
+import { ref } from 'vue'
 
 export default {
+  setup() {
+    const count = ref(user)
+    return {
+      count
+    }
+  },
   data() {
     return {
       userData: {

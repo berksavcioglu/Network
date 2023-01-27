@@ -42,10 +42,17 @@
 
 
 <script>
+import { ref } from 'vue'
 import { collection, addDoc,doc, updateDoc, arrayUnion } from "firebase/firestore";
 import { db } from "~/firebase";
 import { mapGetters } from "vuex"
 export default {
+  setup() {
+    const count = ref(item)
+    return {
+      count
+    }
+  },
   data() {
     return {
       selectedItem: null,

@@ -9,21 +9,22 @@ import FooterCopyright from '~/components/FooterCopyright.vue';
 
 
     <Slider />
-
+    
 
       <Collection/>
       <div class="container">
         <ItemSlider :data="data" @itemDetail="itemDetail"/>
       </div>
       <SocialNetwork />
-      <FooterUst />
+      <FooterUst /> 
       <FooterIcerik/>
-      <FooterCopyright/>
-
-  </div>
-</template>
+      <FooterCopyright/> 
+   
+  </div>   
+</template> 
 
 <script>
+
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { mapGetters } from "vuex";
 import { db } from "~/firebase";
@@ -51,6 +52,6 @@ export default {
     }
   },
 }
-</script>
+</script> 
 
 

@@ -149,7 +149,7 @@
 export default {
     data() {
         return {
-            logo: { id: 0, url: 'https://www.network.com.tr/assets/v2/img/Network.jpg', width: '140px' }
+         logo: { id: 0, url: 'https://www.network.com.tr/assets/v2/img/Network.jpg', width: '140px' }
         }
     },
 }

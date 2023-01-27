@@ -21,14 +21,22 @@
       <div class="d-flex flex-column justify-content-between mx-3">
         <p class="fw-bold">{{ item.content.totalPrice }} ₺</p>
         <div class="align-self-end pointer" @click="removeItem(item)">
-          <img src="../../static/images/cop.png" class="align-self-end" alt srcset />
+          <div class="align-self-end" alt srcset />
         </div>
       </div>
     </div>
   </template>
   
   <script>
+  import { ref } from 'vue'
   export default {
+    setup() {
+    const count = ref(item)
+    return {
+      count
+    }
+  },
+    
     props: ["item"],
     emits: ["removeItem"],
     data() {

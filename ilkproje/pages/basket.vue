@@ -75,8 +75,14 @@
 import { collection, query, where, getDocs,doc,updateDoc,arrayRemove } from "firebase/firestore";
 import { mapGetters } from "vuex";
 import { db } from "~/firebase";
-
+import { ref } from 'vue'
 export default {
+  setup() {
+    const count = ref(item)
+    return {
+      count
+    }
+  },
 data() {
     return {
       dbBasketData: [],
